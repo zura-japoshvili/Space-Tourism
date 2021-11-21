@@ -20,6 +20,9 @@ body{
 .crew-body{
     background-image: url(../assets/crew/background-crew-desktop.jpg);
 }
+.tech-body{
+    background-image: url(../assets/technology/background-technology-desktop.jpg);
+}
 .sec-1{
     position: relative;
 }
@@ -28,7 +31,7 @@ body{
     height: 96px;
     position: fixed;
     right: 0;
-    top: 50px;
+    top: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -219,5 +222,68 @@ body{
 }
 .crew-img{
     width: 400px;
+    height: 400px;
+}
+.tech-sec{
+    justify-content: flex-start;
+}
+.tech-right{
+    position: absolute;
+    right: 0;
+    top: -15%;
+}
+.tech-left{
+    height: 400px;
+    width: 400px;
+    margin-left: 10%;
+    display: flex;
+}
+.tech-column{
+    width: 10%;
+    margin-left: -10%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.column-dot{
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    font-size: 28px;
+    font-family: 'Bellefair';
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.dot-col-active{
+    background-color: #FFFFFF;
+    color: #0B0D17;
+}
+.tech-content{
+    margin-left: 30px;
+}
+.tech-content h5{
+    font-family: 'Barlow Condersed';
+    color: #D0D6F9;
+    font-size: 16px;
+}
+.tech-content h1{
+    font-family: 'Bellefair';
+    color: #FFFFFF;
+    font-size: 56px;
+    word-break: normal;
+}
+.tech-content p{
+    color: #D0D6F9;
+    font-size: 18px;
+    font-family: 'Barlow Condersed';
+}
+.tech-img{
+    width: 500px;
     height: 400px;
 }
