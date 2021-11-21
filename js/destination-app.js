@@ -20,7 +20,8 @@ let data = {
     },
     getData(data,index){
         dest_img.src = data.destinations[index].images.webp;
-        dest_right.innerHTML = secondNav(index) + createDestRight(data, index);
+        
+        dest_right.innerHTML = secondNav(data.destinations, index) +  createDestRight(data, index);
     }
 }
 
@@ -46,41 +47,16 @@ function createDestRight (data, index) {
     `;
 }
 
-function secondNav(index) {
-    if(index == 0){
-        return `
-        <ul class="nav-2nd">
-            <li class="moon active-2nd" onclick='data.fetchData(0)'>MOON</li>
-            <li class="mars" onclick='data.fetchData(1)'>MARS</li>
-            <li class="europa" onclick='data.fetchData(2)'>EUROPA</li>
-            <li class="titan" onclick='data.fetchData(3)'>TITAN</li>
-        </ul>`;
-    }
-    else if(index == 1){
-        return `
-        <ul class="nav-2nd">
-        <li class="moon" onclick='data.fetchData(0)'>MOON</li>
-        <li class="mars active-2nd" onclick='data.fetchData(1)'>MARS</li>
-        <li class="europa" onclick='data.fetchData(2)'>EUROPA</li>
-        <li class="titan" onclick='data.fetchData(3)'>TITAN</li>
-        </ul>`;
-    }
-    else if(index == 2){
-        return `
-        <ul class="nav-2nd">
-        <li class="moon" onclick='data.fetchData(0)'>MOON</li>
-        <li class="mars" onclick='data.fetchData(1)'>MARS</li>
-        <li class="europa  active-2nd" onclick='data.fetchData(2)'>EUROPA</li>
-        <li class="titan" onclick='data.fetchData(3)'>TITAN</li>
-        </ul>`;
-    }
-    else if(index == 3){
-        return `
-        <ul class="nav-2nd">
-        <li class="moon" onclick='data.fetchData(0)'>MOON</li>
-        <li class="mars" onclick='data.fetchData(1)'>MARS</li>
-        <li class="europa" onclick='data.fetchData(2)'>EUROPA</li>
-        <li class="titan active-2nd" onclick='data.fetchData(3)'>TITAN</li>
-        </ul>`;
-    }
+function secondNav(data, index) {
+    let content = '';
+    data.forEach((i ,num) => {
+        if(num == index){
+            content +=  `<li class="active-2nd" onclick='data.fetchData(${num})'>${i.name}</li>`;
+        }else{
+            content += `<li onclick='data.fetchData(${num})'>${i.name}</li>`
+        }
+    });
+    return `
+    <ul class="nav-2nd">${content}</ul>`;
+    
 }

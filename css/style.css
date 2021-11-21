@@ -37,7 +37,7 @@ body{
 }
 .navigation{
     width: 50%;
-    background-color: #979797e3;
+    background-color: #979797be;
     height: 100%;
 }
 .header-line{
@@ -50,7 +50,7 @@ body{
 .nav-a{
     color: #fff;
     margin-left: 20px;
-    padding: 50% 0;
+    padding-bottom: 30px;
     font-size: 16px;
     font-family: 'Barlow Condensed';
 }
