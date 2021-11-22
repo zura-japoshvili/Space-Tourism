@@ -4,7 +4,7 @@ const crew_left = document.querySelector(".crew-left");
 let data = {
     fetchData(index){
         fetch(
-            '../data/data.json'
+            './data/data.json'
         )
         .then((response) => response.json())
         .then((data) =>  this.getData(data, index))

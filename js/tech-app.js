@@ -5,7 +5,7 @@ const tech_img = document.querySelector(".tech-img");
 let data = {
     fetchData(index){
         fetch(
-            '../data/data.json'
+            './data/data.json'
         )
         .then((response) => response.json())
         .then((data) => this.getData(data, index))
